@@ -13,6 +13,7 @@ export default defineConfig({
       fileName: 'open-ai-fetch',
       formats: ['es', 'umd']
     },
+    outDir: 'dist',
   },
   plugins: [getBabelOutputPlugin({
     allowAllFormats: true,

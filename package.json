@@ -3,6 +3,9 @@
   "private": false,
   "version": "0.0.0",
   "author": "frenude",
+  "main": "dist/open-ai-fetch.umd.cjs",
+  "module": "dist/open-ai-fetch.js",
+  "types": "dist/typings/api.d.ts",
   "description": "fetch open-ai for browser",
   "keywords": [
     "javascript",
@@ -11,7 +14,6 @@
     "fetch"
   ],
   "type": "module",
-  "main": "dist/open-ai-fetch.js",
   "files": [
     "dist/*"
   ],

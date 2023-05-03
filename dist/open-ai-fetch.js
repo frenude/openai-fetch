@@ -1,17 +1,17 @@
-function j(a) {
+function j(t) {
   return j = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(r) {
     return typeof r;
   } : function(r) {
     return r && typeof Symbol == "function" && r.constructor === Symbol && r !== Symbol.prototype ? "symbol" : typeof r;
-  }, j(a);
+  }, j(t);
 }
 function l() {
   "use strict";
   /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
   l = function() {
-    return a;
+    return t;
   };
-  var a = {}, r = Object.prototype, t = r.hasOwnProperty, n = Object.defineProperty || function(c, u, o) {
+  var t = {}, r = Object.prototype, a = r.hasOwnProperty, n = Object.defineProperty || function(c, u, o) {
     c[u] = o.value;
   }, s = typeof Symbol == "function" ? Symbol : {}, i = s.iterator || "@@iterator", e = s.asyncIterator || "@@asyncIterator", h = s.toStringTag || "@@toStringTag";
   function y(c, u, o) {
@@ -35,7 +35,7 @@ function l() {
       return { type: "throw", arg: f };
     }
   }
-  a.wrap = d;
+  t.wrap = d;
   var k = {};
   function F() {
   }
@@ -48,7 +48,7 @@ function l() {
     return this;
   });
   var P = Object.getPrototypeOf, E = P && P(P(B([])));
-  E && E !== r && t.call(E, i) && (I = E);
+  E && E !== r && a.call(E, i) && (I = E);
   var S = O.prototype = F.prototype = Object.create(I);
   function D(c) {
     ["next", "throw", "return"].forEach(function(u) {
@@ -61,15 +61,15 @@ function l() {
     function o(v, p, T, $) {
       var N = G(c[v], c, p);
       if (N.type !== "throw") {
-        var C = N.arg, M = C.value;
-        return M && j(M) == "object" && t.call(M, "__await") ? u.resolve(M.__await).then(function(L) {
-          o("next", L, T, $);
-        }, function(L) {
-          o("throw", L, T, $);
-        }) : u.resolve(M).then(function(L) {
-          C.value = L, T(C);
-        }, function(L) {
-          return o("throw", L, T, $);
+        var L = N.arg, C = L.value;
+        return C && j(C) == "object" && a.call(C, "__await") ? u.resolve(C.__await).then(function(M) {
+          o("next", M, T, $);
+        }, function(M) {
+          o("throw", M, T, $);
+        }) : u.resolve(C).then(function(M) {
+          L.value = M, T(L);
+        }, function(M) {
+          return o("throw", M, T, $);
         });
       }
       $(N.arg);
@@ -77,8 +77,8 @@ function l() {
     var f;
     n(this, "_invoke", { value: function(p, T) {
       function $() {
-        return new u(function(N, C) {
-          o(p, T, N, C);
+        return new u(function(N, L) {
+          o(p, T, N, L);
         });
       }
       return f = f ? f.then($, $) : $();
@@ -154,7 +154,7 @@ function l() {
       if (!isNaN(c.length)) {
         var o = -1, f = function v() {
           for (; ++o < c.length; )
-            if (t.call(c, o))
+            if (a.call(c, o))
               return v.value = c[o], v.done = !1, v;
           return v.value = void 0, v.done = !0, v;
         };
@@ -166,26 +166,26 @@ function l() {
   function H() {
     return { value: void 0, done: !0 };
   }
-  return b.prototype = O, n(S, "constructor", { value: O, configurable: !0 }), n(O, "constructor", { value: b, configurable: !0 }), b.displayName = y(O, h, "GeneratorFunction"), a.isGeneratorFunction = function(c) {
+  return b.prototype = O, n(S, "constructor", { value: O, configurable: !0 }), n(O, "constructor", { value: b, configurable: !0 }), b.displayName = y(O, h, "GeneratorFunction"), t.isGeneratorFunction = function(c) {
     var u = typeof c == "function" && c.constructor;
     return !!u && (u === b || (u.displayName || u.name) === "GeneratorFunction");
-  }, a.mark = function(c) {
+  }, t.mark = function(c) {
     return Object.setPrototypeOf ? Object.setPrototypeOf(c, O) : (c.__proto__ = O, y(c, h, "GeneratorFunction")), c.prototype = Object.create(S), c;
-  }, a.awrap = function(c) {
+  }, t.awrap = function(c) {
     return { __await: c };
   }, D(A.prototype), y(A.prototype, e, function() {
     return this;
-  }), a.AsyncIterator = A, a.async = function(c, u, o, f, v) {
+  }), t.AsyncIterator = A, t.async = function(c, u, o, f, v) {
     v === void 0 && (v = Promise);
     var p = new A(d(c, u, o, f), v);
-    return a.isGeneratorFunction(u) ? p : p.next().then(function(T) {
+    return t.isGeneratorFunction(u) ? p : p.next().then(function(T) {
       return T.done ? T.value : p.next();
     });
   }, D(S), y(S, h, "Generator"), y(S, i, function() {
     return this;
   }), y(S, "toString", function() {
     return "[object Generator]";
-  }), a.keys = function(c) {
+  }), t.keys = function(c) {
     var u = Object(c), o = [];
     for (var f in u)
       o.push(f);
@@ -197,10 +197,10 @@ function l() {
       }
       return v.done = !0, v;
     };
-  }, a.values = B, W.prototype = { constructor: W, reset: function(u) {
+  }, t.values = B, W.prototype = { constructor: W, reset: function(u) {
     if (this.prev = 0, this.next = 0, this.sent = this._sent = void 0, this.done = !1, this.delegate = null, this.method = "next", this.arg = void 0, this.tryEntries.forEach(J), !u)
       for (var o in this)
-        o.charAt(0) === "t" && t.call(this, o) && !isNaN(+o.slice(1)) && (this[o] = void 0);
+        o.charAt(0) === "t" && a.call(this, o) && !isNaN(+o.slice(1)) && (this[o] = void 0);
   }, stop: function() {
     this.done = !0;
     var u = this.tryEntries[0].completion;
@@ -211,15 +211,15 @@ function l() {
     if (this.done)
       throw u;
     var o = this;
-    function f(C, M) {
-      return T.type = "throw", T.arg = u, o.next = C, M && (o.method = "next", o.arg = void 0), !!M;
+    function f(L, C) {
+      return T.type = "throw", T.arg = u, o.next = L, C && (o.method = "next", o.arg = void 0), !!C;
     }
     for (var v = this.tryEntries.length - 1; v >= 0; --v) {
       var p = this.tryEntries[v], T = p.completion;
       if (p.tryLoc === "root")
         return f("end");
       if (p.tryLoc <= this.prev) {
-        var $ = t.call(p, "catchLoc"), N = t.call(p, "finallyLoc");
+        var $ = a.call(p, "catchLoc"), N = a.call(p, "finallyLoc");
         if ($ && N) {
           if (this.prev < p.catchLoc)
             return f(p.catchLoc, !0);
@@ -239,7 +239,7 @@ function l() {
   }, abrupt: function(u, o) {
     for (var f = this.tryEntries.length - 1; f >= 0; --f) {
       var v = this.tryEntries[f];
-      if (v.tryLoc <= this.prev && t.call(v, "finallyLoc") && this.prev < v.finallyLoc) {
+      if (v.tryLoc <= this.prev && a.call(v, "finallyLoc") && this.prev < v.finallyLoc) {
         var p = v;
         break;
       }
@@ -272,43 +272,43 @@ function l() {
     throw new Error("illegal catch attempt");
   }, delegateYield: function(u, o, f) {
     return this.delegate = { iterator: B(u), resultName: o, nextLoc: f }, this.method === "next" && (this.arg = void 0), k;
-  } }, a;
+  } }, t;
 }
-function Q(a, r) {
-  var t = Object.keys(a);
+function Q(t, r) {
+  var a = Object.keys(t);
   if (Object.getOwnPropertySymbols) {
-    var n = Object.getOwnPropertySymbols(a);
+    var n = Object.getOwnPropertySymbols(t);
     r && (n = n.filter(function(s) {
-      return Object.getOwnPropertyDescriptor(a, s).enumerable;
-    })), t.push.apply(t, n);
-  }
-  return t;
-}
-function ae(a) {
-  for (var r = 1; r < arguments.length; r++) {
-    var t = arguments[r] != null ? arguments[r] : {};
-    r % 2 ? Q(Object(t), !0).forEach(function(n) {
-      x(a, n, t[n]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(t)) : Q(Object(t)).forEach(function(n) {
-      Object.defineProperty(a, n, Object.getOwnPropertyDescriptor(t, n));
-    });
+      return Object.getOwnPropertyDescriptor(t, s).enumerable;
+    })), a.push.apply(a, n);
   }
   return a;
 }
-function X(a, r, t, n, s, i, e) {
+function ae(t) {
+  for (var r = 1; r < arguments.length; r++) {
+    var a = arguments[r] != null ? arguments[r] : {};
+    r % 2 ? Q(Object(a), !0).forEach(function(n) {
+      x(t, n, a[n]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a)) : Q(Object(a)).forEach(function(n) {
+      Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(a, n));
+    });
+  }
+  return t;
+}
+function X(t, r, a, n, s, i, e) {
   try {
-    var h = a[i](e), y = h.value;
+    var h = t[i](e), y = h.value;
   } catch (d) {
-    t(d);
+    a(d);
     return;
   }
   h.done ? r(y) : Promise.resolve(y).then(n, s);
 }
-function m(a) {
+function m(t) {
   return function() {
-    var r = this, t = arguments;
+    var r = this, a = arguments;
     return new Promise(function(n, s) {
-      var i = a.apply(r, t);
+      var i = t.apply(r, a);
       function e(y) {
         X(i, n, s, e, h, "next", y);
       }
@@ -319,73 +319,70 @@ function m(a) {
     });
   };
 }
-function ie(a, r) {
-  if (!(a instanceof r))
+function ie(t, r) {
+  if (!(t instanceof r))
     throw new TypeError("Cannot call a class as a function");
 }
-function Z(a, r) {
-  for (var t = 0; t < r.length; t++) {
-    var n = r[t];
-    n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(a, ee(n.key), n);
+function Z(t, r) {
+  for (var a = 0; a < r.length; a++) {
+    var n = r[a];
+    n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(t, ee(n.key), n);
   }
 }
-function ue(a, r, t) {
-  return r && Z(a.prototype, r), t && Z(a, t), Object.defineProperty(a, "prototype", { writable: !1 }), a;
+function ue(t, r, a) {
+  return r && Z(t.prototype, r), a && Z(t, a), Object.defineProperty(t, "prototype", { writable: !1 }), t;
 }
-function x(a, r, t) {
-  return r = ee(r), r in a ? Object.defineProperty(a, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : a[r] = t, a;
+function x(t, r, a) {
+  return r = ee(r), r in t ? Object.defineProperty(t, r, { value: a, enumerable: !0, configurable: !0, writable: !0 }) : t[r] = a, t;
 }
-function ee(a) {
-  var r = se(a, "string");
+function ee(t) {
+  var r = se(t, "string");
   return j(r) === "symbol" ? r : String(r);
 }
-function se(a, r) {
-  if (j(a) !== "object" || a === null)
-    return a;
-  var t = a[Symbol.toPrimitive];
-  if (t !== void 0) {
-    var n = t.call(a, r || "default");
+function se(t, r) {
+  if (j(t) !== "object" || t === null)
+    return t;
+  var a = t[Symbol.toPrimitive];
+  if (a !== void 0) {
+    var n = a.call(t, r || "default");
     if (j(n) !== "object")
       return n;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
-  return (r === "string" ? String : Number)(a);
+  return (r === "string" ? String : Number)(t);
 }
-var w;
-(function(a) {
-  a.Model = "/v1/models", a.Completions = "/v1/completions", a.Chat = "/v1/chat/completions", a.Edit = "/v1/edits", a.Image = "/v1/images/generations", a.ImageEdit = "/v1/images/edits", a.IimageVariation = "/v1/images/variations", a.Embeddings = "/v1/embeddings", a.Transcriptions = "/v1/audio/transcriptions", a.Translations = "/v1/audio/translations", a.Files = "/v1/files", a.FineTune = "/v1/fine-tunes", a.Moderations = "/v1/moderations", a.Engines = "/v1/engines";
-})(w || (w = {}));
-var g;
-(function(a) {
-  a.POST = "POST", a.GET = "GET", a.PUT = "PUT", a.DELETE = "DELETE";
-})(g || (g = {}));
-function oe(a) {
-  var r, t, n, s, i, e, h;
+var w = /* @__PURE__ */ function(t) {
+  return t.Model = "/v1/models", t.Completions = "/v1/completions", t.Chat = "/v1/chat/completions", t.Edit = "/v1/edits", t.Image = "/v1/images/generations", t.ImageEdit = "/v1/images/edits", t.IimageVariation = "/v1/images/variations", t.Embeddings = "/v1/embeddings", t.Transcriptions = "/v1/audio/transcriptions", t.Translations = "/v1/audio/translations", t.Files = "/v1/files", t.FineTune = "/v1/fine-tunes", t.Moderations = "/v1/moderations", t.Engines = "/v1/engines", t;
+}(w || {}), g = /* @__PURE__ */ function(t) {
+  return t.POST = "POST", t.GET = "GET", t.PUT = "PUT", t.DELETE = "DELETE", t;
+}(g || {});
+function oe(t) {
+  var r, a, n, s, i, e, h;
   return y(), {
     feed: d,
     reset: y
   };
   function y() {
-    r = !0, t = "", n = 0, s = -1, i = void 0, e = void 0, h = "";
+    r = !0, a = "", n = 0, s = -1, i = void 0, e = void 0, h = "";
   }
   function d(k) {
-    t = t ? t + k : k, r && ce(t) && (t = t.slice(re.length)), r = !1;
-    for (var F = t.length, b = 0, O = !1; b < F; ) {
-      O && (t[b] === "\n" && ++b, O = !1);
+    a = a ? a + k : k, r && ce(a) && (a = a.slice(re.length)), r = !1;
+    for (var F = a.length, b = 0, O = !1; b < F; ) {
+      O && (a[b] === "\n" && ++b, O = !1);
       for (var I = -1, P = s, E = void 0, S = n; I < 0 && S < F; ++S)
-        E = t[S], E === ":" && P < 0 ? P = S - b : E === "\r" ? (O = !0, I = S - b) : E === "\n" && (I = S - b);
+        E = a[S], E === ":" && P < 0 ? P = S - b : E === "\r" ? (O = !0, I = S - b) : E === "\n" && (I = S - b);
       if (I < 0) {
         n = F - b, s = P;
         break;
       } else
         n = 0, s = -1;
-      G(t, b, P, I), b += I + 1;
+      G(a, b, P, I), b += I + 1;
     }
-    b === F ? t = "" : b > 0 && (t = t.slice(b));
+    b === F ? a = "" : b > 0 && (a = a.slice(b));
   }
   function G(k, F, b, O) {
     if (O === 0) {
-      h.length > 0 && (a({
+      h.length > 0 && (t({
         type: "event",
         id: i,
         event: e || void 0,
@@ -405,7 +402,7 @@ function oe(a) {
       i = A;
     else if (P === "retry") {
       var U = parseInt(A, 10);
-      Number.isNaN(U) || a({
+      Number.isNaN(U) || t({
         type: "reconnect-interval",
         value: U
       });
@@ -413,60 +410,60 @@ function oe(a) {
   }
 }
 var re = [239, 187, 191];
-function ce(a) {
-  return re.every(function(r, t) {
-    return a.charCodeAt(t) === r;
+function ce(t) {
+  return re.every(function(r, a) {
+    return t.charCodeAt(a) === r;
   });
 }
-function Y(a) {
-  return a === void 0;
+function Y(t) {
+  return t === void 0;
 }
-function le(a) {
-  return a === null;
+function le(t) {
+  return t === null;
 }
-function fe(a) {
-  return typeof a == "boolean";
+function fe(t) {
+  return typeof t == "boolean";
 }
-function V(a) {
-  return a === Object(a);
+function V(t) {
+  return t === Object(t);
 }
-function _(a) {
-  return Array.isArray(a);
+function _(t) {
+  return Array.isArray(t);
 }
-function pe(a) {
-  return a instanceof Date;
+function pe(t) {
+  return t instanceof Date;
 }
-function ne(a, r) {
-  return r ? V(a) && !Y(a.uri) : V(a) && typeof a.size == "number" && typeof a.type == "string" && typeof a.slice == "function";
+function ne(t, r) {
+  return r ? V(t) && !Y(t.uri) : V(t) && typeof t.size == "number" && typeof t.type == "string" && typeof t.slice == "function";
 }
-function he(a, r) {
-  return ne(a, r) && typeof a.name == "string" && (V(a.lastModifiedDate) || typeof a.lastModified == "number");
+function he(t, r) {
+  return ne(t, r) && typeof t.name == "string" && (V(t.lastModifiedDate) || typeof t.lastModified == "number");
 }
-function z(a) {
-  return Y(a) ? !1 : a;
+function z(t) {
+  return Y(t) ? !1 : t;
 }
-function K(a, r, t, n) {
-  r = r || {}, t = t || new FormData(), r.indices = z(r.indices), r.nullsAsUndefineds = z(r.nullsAsUndefineds), r.booleansAsIntegers = z(r.booleansAsIntegers), r.allowEmptyArrays = z(r.allowEmptyArrays), r.noFilesWithArrayNotation = z(r.noFilesWithArrayNotation), r.dotsForObjectNotation = z(r.dotsForObjectNotation);
-  var s = typeof t.getParts == "function";
-  return Y(a) || (le(a) ? r.nullsAsUndefineds || t.append(n, "") : fe(a) ? r.booleansAsIntegers ? t.append(n, a ? 1 : 0) : t.append(n, a) : _(a) ? a.length ? a.forEach(function(i, e) {
+function K(t, r, a, n) {
+  r = r || {}, a = a || new FormData(), r.indices = z(r.indices), r.nullsAsUndefineds = z(r.nullsAsUndefineds), r.booleansAsIntegers = z(r.booleansAsIntegers), r.allowEmptyArrays = z(r.allowEmptyArrays), r.noFilesWithArrayNotation = z(r.noFilesWithArrayNotation), r.dotsForObjectNotation = z(r.dotsForObjectNotation);
+  var s = typeof a.getParts == "function";
+  return Y(t) || (le(t) ? r.nullsAsUndefineds || a.append(n, "") : fe(t) ? r.booleansAsIntegers ? a.append(n, t ? 1 : 0) : a.append(n, t) : _(t) ? t.length ? t.forEach(function(i, e) {
     var h = n + "[" + (r.indices ? e : "") + "]";
-    r.noFilesWithArrayNotation && he(i, s) && (h = n), K(i, r, t, h);
-  }) : r.allowEmptyArrays && t.append(n + "[]", "") : pe(a) ? t.append(n, a.toISOString()) : V(a) && !ne(a, s) ? Object.keys(a).forEach(function(i) {
-    var e = a[i];
+    r.noFilesWithArrayNotation && he(i, s) && (h = n), K(i, r, a, h);
+  }) : r.allowEmptyArrays && a.append(n + "[]", "") : pe(t) ? a.append(n, t.toISOString()) : V(t) && !ne(t, s) ? Object.keys(t).forEach(function(i) {
+    var e = t[i];
     if (_(e))
       for (; i.length > 2 && i.lastIndexOf("[]") === i.length - 2; )
         i = i.substring(0, i.length - 2);
     var h = n ? r.dotsForObjectNotation ? n + "." + i : n + "[" + i + "]" : i;
-    K(e, r, t, h);
-  }) : t.append(n, a)), t;
+    K(e, r, a, h);
+  }) : a.append(n, t)), a;
 }
 var R = {
   serialize: K
 }, ve = "https://api.openai.com", de = /* @__PURE__ */ function() {
-  function a(r) {
-    ie(this, a), x(this, "configuration", void 0), this.configuration = r;
+  function t(r) {
+    ie(this, t), x(this, "configuration", void 0), this.configuration = r;
   }
-  return ue(a, [{
+  return ue(t, [{
     key: "doFetch",
     value: function() {
       var r = m(/* @__PURE__ */ l().mark(function n(s, i, e) {
@@ -493,10 +490,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n, s, i) {
+      function a(n, s, i) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "fetchOpenaiStream",
@@ -524,10 +521,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n, s, i) {
+      function a(n, s, i) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "fetchOpenai",
@@ -549,14 +546,14 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n, s, i) {
+      function a(n, s, i) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "stream",
-    value: function(t) {
+    value: function(a) {
       return new ReadableStream({
         start: function(s) {
           return m(/* @__PURE__ */ l().mark(function i() {
@@ -579,7 +576,7 @@ var R = {
                           s.error(D);
                         }
                       }
-                    }, y = oe(h), d = (e = t.body) === null || e === void 0 ? void 0 : e.pipeThrough(new TextDecoderStream()).getReader();
+                    }, y = oe(h), d = (e = a.body) === null || e === void 0 ? void 0 : e.pipeThrough(new TextDecoderStream()).getReader();
                   case 3:
                     return O.next = 6, d.read();
                   case 6:
@@ -617,10 +614,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "listModels",
@@ -639,10 +636,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t() {
+      function a() {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "createCompletion",
@@ -661,10 +658,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "createChatCompletion",
@@ -683,10 +680,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "createEdit",
@@ -705,10 +702,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "createEmbedding",
@@ -727,10 +724,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "createImage",
@@ -749,10 +746,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "createImageEdit",
@@ -771,10 +768,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "createImageVariation",
@@ -793,10 +790,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "createTranscription",
@@ -815,10 +812,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "createTranslation",
@@ -837,10 +834,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "listFiles",
@@ -859,10 +856,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t() {
+      function a() {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "createFile",
@@ -881,10 +878,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "deleteFile",
@@ -903,10 +900,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "retrieveFile",
@@ -925,10 +922,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "downloadFile",
@@ -947,10 +944,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "createFineTune",
@@ -969,10 +966,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "listFineTunes",
@@ -991,10 +988,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t() {
+      function a() {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "retrieveFineTune",
@@ -1013,10 +1010,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "cancelFineTune",
@@ -1035,10 +1032,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "listFineTuneEvents",
@@ -1065,10 +1062,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n, s) {
+      function a(n, s) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "deleteModel",
@@ -1087,10 +1084,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
   }, {
     key: "createModeration",
@@ -1109,10 +1106,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
     /**
      * @deprecated
@@ -1134,10 +1131,10 @@ var R = {
             }
         }, n, this);
       }));
-      function t() {
+      function a() {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
     /**
      * @deprecated
@@ -1159,12 +1156,12 @@ var R = {
             }
         }, n, this);
       }));
-      function t(n) {
+      function a(n) {
         return r.apply(this, arguments);
       }
-      return t;
+      return a;
     }()
-  }]), a;
+  }]), t;
 }();
 export {
   de as OpenAiAPI
