@@ -1,1 +1,1 @@
-# openai-fetch
+这是一个用来请求openai接口的库
