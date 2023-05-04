@@ -4,6 +4,8 @@ Usage:
 
 ```javascript
 import { OpenAiAPI } from 'openai-fetch-browser'
+import { Configuration } from 'openai'
+
 const configuration = new Configuration({
   apiKey: 'your key of open-ai',
 });
